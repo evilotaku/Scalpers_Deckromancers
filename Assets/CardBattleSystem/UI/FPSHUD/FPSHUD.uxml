@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/FPSHUD/FPSHUD.uss?fileID=7433441132597879392&amp;guid=3a3db460e8dec5a49bfcdf61d46a425c&amp;type=3#FPSHUD"/>
+    <Style src="project://database/Assets/UI/CardUI/CardUI.uss?fileID=7433441132597879392&amp;guid=1ce857a082625e144aa1b04c0146ee4f&amp;type=3#CardUI"/>
+    <ui:VisualElement name="root" class="fps-hud-root">
+        <ui:Label name="TurnTimerLabel" text="90" class="timer-text" style="position: absolute; top: 20px; right: 20px; font-size: 40px; color: white;"/>
+        <ui:VisualElement name="crosshair" class="crosshair">
+            <ui:VisualElement class="crosshair-line crosshair-horizontal"/>
+            <ui:VisualElement class="crosshair-line crosshair-vertical"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="stats" class="stats-container">
+            <ui:VisualElement class="stat-row">
+                <ui:Label text="HEALTH" class="stat-label"/>
+                <ui:Label name="healthValue" text="100" class="stat-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="health-bar-container">
+                <ui:VisualElement name="healthFill" class="health-bar-fill"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="stat-row" style="margin-top: 10px;">
+                <ui:Label text="MANA" class="stat-label"/>
+                <ui:Label name="manaValue" text="10" class="stat-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="health-bar-container">
+                <ui:VisualElement name="manaFill" class="mana-bar-fill"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="PlayerHand" class="hud-hand-container">
+            <ui:VisualElement name="horizontalList" class="reorderable-list horizontal-list player-hand" style="flex-shrink: 0; min-width: 100%;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,328 @@
+/*
+2026-07-22 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+/*
+2026-07-18 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+/*
+2026-07-18 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+/*
+2026-07-18 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+/*
+2026-07-03 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+:root {
+    padding: 12px;
+}
+
+.title {
+    font-size: 20px;
+    -unity-font-style: bold;
+    margin-bottom: 16px;
+    color: #4cbfff;
+}
+
+.section-box {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+.section-header {
+    -unity-font-style: bold;
+    margin-bottom: 6px;
+    color: #e6e6e6;
+}
+
+.sub-header {
+    -unity-font-style: bold;
+    margin-bottom: 6px;
+}
+
+.reaction-header {
+    margin-top: 10px;
+}
+
+.list-scroll-view {
+    border-width: 1px;
+    border-color: gray;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.reaction-list {
+    max-height: 150px;
+}
+
+.action-list {
+    max-height: 200px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.button-row {
+    margin-top: 8px;
+}
+
+.button-row > Button {
+    flex-grow: 1;
+}
+
+.path-row > TextField {
+    flex-grow: 1;
+}
+
+.generate-button {
+    font-size: 14px;
+    -unity-font-style: bold;
+    height: 36px;
+    margin-top: 12px;
+    background-color: #338c33;
+    color: white;
+}
+
+.export-button {
+    font-size: 14px;
+    -unity-font-style: bold;
+    height: 36px;
+    margin-top: 8px;
+    background-color: #1f6aa5;
+    color: white;
+}
+
+.import-button {
+    font-size: 14px;
+    -unity-font-style: bold;
+    height: 36px;
+    margin-top: 8px;
+    background-color: #1a887b;
+    color: white;
+}
+
+.load-button {
+    font-size: 12px;
+    height: 24px;
+    margin-top: 4px;
+    background-color: #555;
+    color: #eee;
+}
+
+.status-label {
+    margin-top: 8px;
+    -unity-font-style: italic;
+    -unity-text-align: middle-center;
+}
+
+.status-label.error {
+    color: red;
+}
+
+.status-label.success {
+    color: green;
+}
+
+.list-item-row {
+    flex-direction: row;
+    margin-bottom: 4px;
+    align-items: center;
+}
+
+.list-item-row-complex {
+    margin-bottom: 8px;
+    padding: 6px;
+    border-width: 1px;
+    border-color: #444;
+    border-radius: 4px;
+    background-color: #333;
+}
+
+.reaction-item-name {
+    flex-grow: 1;
+    -unity-font-style: bold;
+}
+
+.trigger-field {
+    width: 150px;
+}
+
+.remove-button {
+    color: red;
+}
+
+.action-item-name {
+    width: 100px;
+    -unity-font-style: bold;
+}
+
+.field-width-80 {
+    width: 80px;
+}
+
+.field-width-100 {
+    width: 100px;
+}
+
+.field-width-120 {
+    width: 120px;
+}
+
+.code-field {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.manager-section {
+    margin-top: 16px;
+    border-top-width: 2px;
+    border-top-color: #4cbfff;
+    padding-top: 12px;
+}
+
+.card-list-scroll {
+    height: 300px;
+    border-width: 1px;
+    border-color: #555;
+    background-color: #2a2a2a;
+}
+
+.card-row {
+    flex-direction: row;
+    padding: 4px;
+    border-bottom-width: 1px;
+    border-bottom-color: #3f3f3f;
+    align-items: center;
+}
+
+.card-row:hover {
+    background-color: #3a3a3a;
+}
+
+.card-row-field {
+    margin-right: 4px;
+}
+
+.card-row-name {
+    width: 120px;
+    -unity-font-style: bold;
+}
+
+.card-row-stat {
+    width: 50px;
+}
+
+.card-row-text {
+    flex-grow: 1;
+    min-width: 100px;
+}
+
+.manager-buttons {
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.manager-buttons > Button {
+    flex-grow: 1;
+}
+
+.card-header-row {
+    background-color: #444;
+    border-bottom-width: 2px;
+    border-bottom-color: #4cbfff;
+}
+
+.card-header-label {
+    -unity-font-style: bold;
+    color: #4cbfff;
+    -unity-text-align: middle-left;
+    padding-left: 2px;
+}
+
+.card-row-image-header {
+    width: 100px;
+}
+
+/* Cloud Save View Styles */
+.toolbar {
+    flex-direction: row;
+    background-color: #383838;
+    padding: 4px;
+    border-bottom-width: 1px;
+    border-bottom-color: #222;
+}
+
+.toolbar-button {
+    flex-grow: 1;
+    height: 30px;
+}
+
+.toolbar-button.active {
+    background-color: #4cbfff;
+    color: black;
+}
+
+.split-view {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.library-panel {
+    width: 40%;
+    border-right-width: 1px;
+    border-right-color: #222;
+    padding: 8px;
+}
+
+.deck-panel {
+    flex-grow: 1;
+    padding: 8px;
+}
+
+.upload-button {
+    background-color: #338c33;
+    color: white;
+    height: 40px;
+    -unity-font-style: bold;
+    margin-top: 10px;
+}
+
+.deck-item {
+    margin-bottom: 12px;
+    padding: 8px;
+    border-width: 1px;
+    border-color: #444;
+    border-radius: 4px;
+    background-color: #333;
+}
+
+.deck-header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.deck-name {
+    flex-grow: 1;
+    -unity-font-style: bold;
+}
+
+.card-id-item {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.id-label {
+    width: 40px;
+}

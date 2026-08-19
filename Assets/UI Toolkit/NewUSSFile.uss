@@ -1,3 +1,7 @@
+/*
+2026-08-19 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
 /* =====================================================
    SQUAD UP — Dark Arcade UI Theme
    Surface: rgb(24, 24, 24)  dark grey
@@ -43,6 +47,53 @@ Button:hover {
 Button:active {
     scale: 0.97 0.97;
     translate: 0px 3px;
+}
+
+/* ── Dropdown / Popup Fields ── */
+
+.unity-base-popup-field {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.unity-base-popup-field__label {
+    color: rgb(240, 240, 248);
+    -unity-font-style: bold;
+    font-size: 22px;
+    -unity-text-align: middle-left;
+    min-width: 130px;
+}
+
+.unity-base-popup-field__input {
+    background-color: rgb(24, 24, 24);
+    border-left-color: rgb(50, 50, 55);
+    border-right-color: rgb(50, 50, 55);
+    border-top-color: rgb(50, 50, 55);
+    border-bottom-color: rgb(50, 50, 55);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+}
+
+.unity-base-popup-field__text {
+    color: rgb(240, 240, 248);
+    -unity-font-style: bold;
+    font-size: 22px;
+    -unity-text-align: middle-left;
+}
+
+.unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: rgb(240, 240, 248);
 }
 
 /* ── Text Fields ── */

@@ -1,0 +1,8 @@
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\HearthstoneCloudModule.dll
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\HearthstoneCloudModule.deps.json
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\HearthstoneCloudModule.pdb
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\Unity.Services.CloudCode.Apis.dll
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\Unity.Services.CloudCode.Core.dll
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\devit\AppData\Local\Temp\HearthstoneCloudModule\module-compilation-cross-platform\Newtonsoft.Json.dll

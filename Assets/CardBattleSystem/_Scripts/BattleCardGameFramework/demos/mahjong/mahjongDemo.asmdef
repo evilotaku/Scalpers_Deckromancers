@@ -1,0 +1,17 @@
+{
+    "name": "mahjongDemo",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ee1e7f537b89293479754e0eb73c659c",
+        "UnityEngine.UIElementsModule"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,36 @@
+.map-node {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.2);
+    transition-property: scale, border-color, background-color;
+    transition-duration: 0.2s;
+}
+
+.map-node:hover {
+    scale: 1.2;
+    border-color: white;
+}
+
+.map-node--accessible {
+    opacity: 1;
+}
+
+.map-node--inaccessible {
+    opacity: 0.4;
+}
+
+.map-node--highlight {
+    border-width: 4px;
+    border-color: white;
+}
+
+.map-node__label {
+    font-size: 20px;
+    color: white;
+    -unity-font-style: bold;
+}

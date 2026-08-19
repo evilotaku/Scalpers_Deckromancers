@@ -1,0 +1,26 @@
+{
+    "name": "SnapCloudModule",
+    "rootNamespace": "snap",
+    "references": [
+        "GUID:7284d1e8423490b46bbb7a1cc15a31c4",
+        "GUID:3203a5bd0983b634e962989e5e53678e",
+        "GUID:dcea414711a1d417c899526c51c49ae6",
+        "GUID:ee1e7f537b89293479754e0eb73c659c",
+        "GUID:81dc0d6f649d7a0458cf02277864258d",
+        "GUID:ef65a05c55bb10f45b8fedd20bcc373b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Microsoft.Extensions.Logging.Abstractions.dll",
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

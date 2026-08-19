@@ -1,0 +1,13 @@
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\bin\Release\net9.0\any\HearthstoneCloudModule.deps.json
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\bin\Release\net9.0\any\HearthstoneCloudModule.dll
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\bin\Release\net9.0\any\HearthstoneCloudModule.pdb
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.csproj.AssemblyReference.cache
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.GeneratedMSBuildEditorConfig.editorconfig
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.AssemblyInfoInputs.cache
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.AssemblyInfo.cs
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.csproj.CoreCompileInputs.cache
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.sourcelink.json
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.dll
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\refint\HearthstoneCloudModule.dll
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\HearthstoneCloudModule.pdb
+D:\GameProjects\Unity_Projects\Scalpers_Ruin_Everything\HearthstoneCloudModule\Project\obj\Release\net9.0\any\ref\HearthstoneCloudModule.dll

@@ -1,0 +1,45 @@
+/* CardUI Builder Styles */
+
+/* Main Container for the entire builder panel area */
+#DeckBuilderPanel {
+    flex-direction: column;
+    padding: 15px;
+}
+
+/* The main view displaying the selected cards in the deck (40 slots) */
+.deck-view-container {
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px dashed rgba(255, 255, 255, 0.3); /* Visual guide for the container */
+}
+
+/* Individual card slots within the deck view */
+.deck-card-slot {
+    width: 80px; /* Standard size adaptation */
+    height: 120px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    background-color: rgba(50, 50, 70, 0.6); /* Darker background for distinction */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* The button that finalizes the deck setup */
+#SetDeckButton {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green for success/action */
+    color: white;
+}
+
+/* Style applied when the deck fails validation (e.g., wrong size) */
+#SetDeckButton[disabled] {
+    background-color: #D32F2F; /* Red for error/disabled */
+    cursor: not-allowed;
+}
+
+/* Status label display area */
+.deck-status-label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}

@@ -1,0 +1,252 @@
+/*
+2026-07-22 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+/*
+2: 2026-07-19 AI-Tag
+3: This was created with the help of Assistant, a Unity Artificial Intelligence product.
+4: */
+/* Main styling for Card UI converted to UI Toolkit and App UI */
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    flex-direction: column;
+}
+
+.app-panel {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    flex-direction: column;
+}
+
+.title-bar {
+    height: 60px;
+    background-color: #181818;
+    border-bottom-width: 1px;
+    border-bottom-color: #2a2a2a;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title-text {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: #ffffff;
+}
+
+.timer-text {
+    font-size: 24px;
+    color: #ffffff;
+    -unity-font-style: bold;
+    position: absolute;
+    right: 20px;
+}
+
+.play-area {
+    flex-direction: row;
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.left-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+.right-container {
+    width: 280px;
+    flex-direction: column;
+}
+
+.list-container {
+    background-color: #161616;
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: #2c2c2c;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.grid-list-container {
+    flex-grow: 1;
+}
+
+.horizontal-list-container {
+    height: 280px;
+}
+
+.vertical-list-container {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.list-title {
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: #aaaaaa;
+    margin-bottom: 12px;
+}
+
+.reorderable-list {
+    flex-grow: 1;
+    background-color: #0d0d0d;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grid-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.horizontal-list {
+    flex-direction: row;
+    align-items: center;
+}
+
+.vertical-list {
+    flex-direction: column;
+}
+
+/* Card Slot and Content */
+.card-slot {
+    width: 110px;
+    height: 170px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #242424;
+    border-width: 1px;
+    border-color: #3e3e3e;
+    overflow: hidden;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/_Art/Sample Card.png");
+}
+
+/* Unplayable state */
+.card-unplayable {
+    opacity: 0.5;
+}
+
+.card-unplayable .scifi-card-bg {
+    -unity-background-image-tint-color: #888888;
+}
+
+/* Hover effect for cards that are NOT being dragged */
+.card-content:hover {
+    border-color: #007acc;
+}
+
+/* Focus and hover fanning effect - ONLY in horizontal-list (player hand) */
+.horizontal-list:hover .card-content {
+    opacity: 0.6;
+    scale: 0.9 0.9;
+}
+
+.horizontal-list:hover .card-content:hover {
+    opacity: 1.0;
+    scale: 1.25 1.25;
+    translate: 0 -35px;
+    border-color: #007acc;
+    border-width: 2px;
+}
+
+/* Dragging state classes */
+.card-content-dragging {
+    position: absolute;
+    width: 110px;
+    height: 170px;
+    opacity: 0.85;
+    border-color: #007acc;
+    border-width: 2px;
+}
+
+.card-slot-collapsed {
+    width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 0;
+    background-color: transparent;
+}
+
+/* Destroy Prompt Overlay */
+.destroy-prompt-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    justify-content: center;
+    align-items: center;
+}
+
+.destroy-prompt-panel {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    background-color: #1e1e1e;
+    border-width: 1px;
+    border-color: #3a3a3a;
+    align-items: center;
+}
+
+.prompt-text {
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    -unity-text-align: middle-center;
+}
+
+.prompt-buttons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.prompt-button {
+    width: 46%;
+    height: 36px;
+}
+
+.hidden {
+    display: none;
+}

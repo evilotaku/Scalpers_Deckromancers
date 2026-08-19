@@ -1,0 +1,115 @@
+/*
+2026-07-26 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+/*
+2026-07-26 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+.root {
+    background-color: rgba(25, 25, 25, 0.95);
+    padding: 15px;
+    flex-direction: row;
+    height: 100%;
+}
+
+.library-panel {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.deck-panel {
+    width: 35%;
+    background-color: rgba(38, 38, 38, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 24px;
+    -unity-font-style: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    font-size: 20px;
+    color: rgb(204, 204, 204);
+}
+
+.deck-count-label {
+    color: white;
+}
+
+.card-grid {
+    flex-grow: 1;
+}
+
+.card-grid .unity-scroll-view__content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.deck-list {
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+.card-item {
+    width: 120px;
+    height: 160px;
+    background-color: rgb(51, 51, 51);
+    margin: 5px;
+    padding: 8px;
+    border-width: 2px;
+    border-color: rgb(66, 66, 66);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-name {
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: white;
+}
+
+.add-btn {
+    width: 100%;
+    background-color: rgb(51, 140, 51);
+    color: white;
+}
+
+.deck-list-item {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(41, 41, 41);
+    margin-bottom: 4px;
+    padding: 0 8px;
+    align-items: center;
+    height: 30px;
+}
+
+.deck-item-name {
+    color: white;
+}
+
+.remove-btn {
+    background-color: rgb(140, 51, 51);
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.primary-btn {
+    background-color: rgb(51, 140, 255);
+    color: black;
+    -unity-font-style: bold;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.status-label {
+    font-size: 12px;
+    color: rgb(77, 191, 255);
+    margin-top: 5px;
+}

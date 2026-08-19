@@ -13,10 +13,12 @@ public class LobbyUI : MonoBehaviour
     public event Action LeaveClicked;
     public event Action QuitClicked;
     public event Action ReadyClicked;
+    public event Action<string> GameTypeChanged;
 
     public string JoinCode { get; private set; } = "";
 
     private Button _hostBtn, _joinBtn, _startBtn, _leaveBtn, _quitBtn, _copyBtn, _readyBtn;
+    private DropdownField _gameTypeDropdown;
     private TextField _joinCodeField;
     private Label _statusLabel;
     private VisualElement _sessionMenu;
@@ -40,6 +42,7 @@ public class LobbyUI : MonoBehaviour
         _quitBtn = root.Q<Button>("quit-btn");
         _copyBtn = root.Q<Button>("copy-btn");
         _readyBtn = root.Q<Button>("ready-btn");
+        _gameTypeDropdown = root.Q<DropdownField>("game-type-dropdown");
         _joinCodeField = root.Q<TextField>("join-code-field");
         _statusLabel = root.Q<Label>("status-label");
         _sessionMenu = root.Q<VisualElement>("SessionMenu");
@@ -52,6 +55,11 @@ public class LobbyUI : MonoBehaviour
         if (_readyBtn != null) _readyBtn.clicked += () => ReadyClicked?.Invoke();
         if (_copyBtn != null) _copyBtn.clicked += () => GUIUtility.systemCopyBuffer = _currentJoinCode;
 
+        if (_gameTypeDropdown != null)
+        {
+            _gameTypeDropdown.RegisterValueChangedCallback(e => GameTypeChanged?.Invoke(e.newValue));
+        }
+
         if (_joinCodeField != null)
             _joinCodeField.RegisterValueChangedCallback(e => JoinCode = e.newValue);
 
@@ -62,11 +70,21 @@ public class LobbyUI : MonoBehaviour
     {
     }
 
+    public void SetGameType(string gameType)
+    {
+        if (_gameTypeDropdown != null && _gameTypeDropdown.choices.Contains(gameType))
+        {
+            _gameTypeDropdown.value = gameType;
+        }
+    }
+
+    public string SelectedGameType => _gameTypeDropdown?.value ?? "Hearthstone";
+
     public void SetIdle()
     {
         _isHostUI = false;
         Show(_hostBtn); Show(_joinBtn); Show(_joinCodeField); Show(_quitBtn); Show(_sessionMenu);
-        Hide(_leaveBtn); Hide(_copyBtn); Hide(_readyBtn); Hide(_startBtn);
+        Hide(_leaveBtn); Hide(_copyBtn); Hide(_readyBtn); Hide(_startBtn); Hide(_gameTypeDropdown);
         if (_hostBtn != null) { _hostBtn.style.backgroundColor = new StyleColor(Red); _hostBtn.style.color = new StyleColor(LightText); _hostBtn.text = "Host"; }
         if (_statusLabel != null) _statusLabel.text = "Not hosting";
         SetReadyText(false);
@@ -76,7 +94,7 @@ public class LobbyUI : MonoBehaviour
     {
         _isHostUI = true;
         _currentJoinCode = joinCode;
-        Show(_hostBtn); Show(_quitBtn); Show(_copyBtn);
+        Show(_hostBtn); Show(_quitBtn); Show(_copyBtn); Show(_gameTypeDropdown);
         Hide(_joinBtn); Hide(_joinCodeField); Hide(_leaveBtn); Hide(_startBtn); Hide(_readyBtn); Hide(_sessionMenu);
         if (_hostBtn != null) { _hostBtn.style.backgroundColor = new StyleColor(Green); _hostBtn.style.color = new StyleColor(DarkText); _hostBtn.text = "Leave"; }
         if (_statusLabel != null) _statusLabel.text = $"Join code: {joinCode}";
@@ -88,7 +106,7 @@ public class LobbyUI : MonoBehaviour
     {
         _isHostUI = false;
         Show(_leaveBtn); Show(_quitBtn);
-        Hide(_hostBtn); Hide(_joinBtn); Hide(_joinCodeField); Hide(_startBtn); Hide(_copyBtn); Hide(_readyBtn); Hide(_sessionMenu);
+        Hide(_hostBtn); Hide(_joinBtn); Hide(_joinCodeField); Hide(_startBtn); Hide(_copyBtn); Hide(_readyBtn); Hide(_sessionMenu); Hide(_gameTypeDropdown);
         if (_statusLabel != null) _statusLabel.text = "Connected to host";
         SetReadyText(false);
     }
@@ -100,12 +118,21 @@ public class LobbyUI : MonoBehaviour
         {
             Show(_readyBtn);
             Hide(_sessionMenu);
-            if (_isHostUI) Show(_startBtn);
+            if (_isHostUI)
+            {
+                Show(_startBtn);
+                Show(_gameTypeDropdown);
+            }
+            else
+            {
+                Hide(_gameTypeDropdown);
+            }
         }
         else
         {
             Hide(_readyBtn);
             Hide(_startBtn);
+            Hide(_gameTypeDropdown);
             Show(_sessionMenu);
         }
     }

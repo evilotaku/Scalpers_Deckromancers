@@ -1,0 +1,38 @@
+/*
+2026-08-17 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+.hand-count-container {
+    width: 300px;
+    height: 200px;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.card-back {
+    width: 60px;
+    height: 90px;
+    background-image: url("project://database/Assets/CardBattleSystem/_Art/CardBack.png");
+    position: absolute;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.count-overlay {
+    position: absolute;
+    bottom: -10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 2px 10px;
+    border-width: 1px;
+    border-color: #FFD700;
+}
+
+.hand-count-label {
+    color: white;
+    font-size: 20px;
+    -unity-font-style: bold;
+}

@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="SnapGameUI.uss" />
+    <ui:VisualElement name="Root" style="flex-grow: 1; background-color: rgb(34, 34, 34); padding: 20px;">
+        <ui:VisualElement name="Header" style="flex-direction: row; justify-content: space-between;">
+            <ui:Label name="TurnLabel" text="Turn: 1/6" style="color: white; font-size: 24px;" />
+            <ui:Label name="EnergyLabel" text="Energy: 1/1" style="color: white; font-size: 24px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Locations" style="flex-grow: 1; flex-direction: row; justify-content: space-around; align-items: center;">
+            <ui:VisualElement name="Location0" class="location">
+                <ui:Label text="Location 1" class="location-name" />
+                <ui:Label name="P2Power" text="0" class="opponent-power" />
+                <ui:VisualElement name="Board" class="board" />
+                <ui:Label name="P1Power" text="0" class="player-power" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Location1" class="location">
+                <ui:Label text="Location 2" class="location-name" />
+                <ui:Label name="P2Power" text="0" class="opponent-power" />
+                <ui:VisualElement name="Board" class="board" />
+                <ui:Label name="P1Power" text="0" class="player-power" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Location2" class="location">
+                <ui:Label text="Location 3" class="location-name" />
+                <ui:Label name="P2Power" text="0" class="opponent-power" />
+                <ui:VisualElement name="Board" class="board" />
+                <ui:Label name="P1Power" text="0" class="player-power" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Footer" style="height: 200px; flex-direction: row; align-items: center;">
+            <ui:VisualElement name="PlayerHand" style="flex-grow: 1; flex-direction: row; justify-content: center;" />
+            <ui:Button name="EndTurnButton" text="End Turn" style="width: 150px; height: 60px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,47 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.AppUI.UI" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/CardUI/CardUI.uss?fileID=7433441132597879392&amp;guid=1ce857a082625e144aa1b04c0146ee4f&amp;type=3#CardUI"/>
+    <ui:VisualElement name="root" class="main-container">
+        <appui:Panel name="appPanel" class="app-panel">
+            <ui:VisualElement name="Title" class="title-bar">
+                <ui:Label text="Cloud Code Card Game" class="title-text"/>
+                <ui:Label name="TurnTimerLabel" text="90" class="timer-text"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="SessionPanel" style="flex-grow: 0; flex-direction: row; width: 22%; height: 6%;">
+                <Blocks.Sessions.QuickJoinButton/>
+                <Blocks.Sessions.Common.LeaveSessionButton/>
+            </ui:VisualElement>
+            <ui:VisualElement name="OpponentHand" class="list-container horizontal-list-container" style="flex-grow: initial; flex-basis: 15%; width: 50%; align-self: center; height: auto;">
+                <ui:Label text="Opponent Hand" class="list-title"/>
+                <ui:VisualElement name="horizontalList" class="reorderable-list horizontal-list opponent-hand" style="justify-content: center; align-self: center; align-items: center; flex-direction: row; flex-grow: 1; height: auto; width: 100%; align-content: center;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="OpponentBoard" class="play-area">
+                <ui:VisualElement class="list-container grid-list-container">
+                    <ui:Label text="Opponent Board" class="list-title"/>
+                    <ui:VisualElement name="gridLayout" class="reorderable-list grid-list opponent-board" style="align-content: auto; justify-content: center; align-self: center; align-items: center; width: 50%; height: 60%;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="destroyPrompt" class="destroy-prompt-overlay hidden">
+                <appui:Panel class="destroy-prompt-panel">
+                    <ui:Label text="Are you sure you want to destroy this item?" class="prompt-text"/>
+                    <ui:VisualElement class="prompt-buttons">
+                        <appui:Button title="Confirm" name="confirmButton" class="prompt-button confirm-btn"/>
+                        <appui:Button title="Cancel" name="cancelButton" class="prompt-button cancel-btn"/>
+                    </ui:VisualElement>
+                </appui:Panel>
+            </ui:VisualElement>
+            <ui:VisualElement name="PlayerBoard" class="play-area">
+                <ui:VisualElement class="list-container grid-list-container">
+                    <ui:Label text="Player Board" class="list-title"/>
+                    <ui:VisualElement name="gridLayout" class="reorderable-list grid-list player-board" style="align-content: auto; justify-content: center; align-self: center; align-items: center; width: 50%; height: 60%;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="PlayerHand" class="list-container horizontal-list-container" style="flex-grow: initial; flex-basis: 15%; width: 50%; align-self: center; height: auto;">
+                <ui:Label text="Player Hand" class="list-title"/>
+                <ui:VisualElement name="horizontalList" class="reorderable-list horizontal-list player-hand" style="justify-content: center; align-self: center; align-items: center; flex-direction: row; flex-grow: 0; height: 100%; width: 100%; align-content: center;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="EndTurnAction" style="flex-grow: 0; flex-direction: row; width: auto;">
+                <appui:Button title="End Turn" name="endTurnButton" class="prompt-button end-turn-btn" style="width: 9%; height: 123px; position: absolute; top: -167px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); -unity-text-align: middle-center; justify-content: center; border-top-width: 14px; border-right-width: 14px; border-bottom-width: 14px; border-left-width: 14px; border-top-left-radius: 35px; border-top-right-radius: 35px; border-bottom-right-radius: 35px; border-bottom-left-radius: 35px; font-size: 14px; -unity-text-auto-size: best-fit 10px 100px; left: 136px;"/>
+            </ui:VisualElement>
+        </appui:Panel>
+    </ui:VisualElement>
+</ui:UXML>

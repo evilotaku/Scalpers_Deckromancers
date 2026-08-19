@@ -1,9 +1,13 @@
+<!--
+2026-08-19 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+-->
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="ChannelRoster" src="project://database/Assets/Blocks/Vivox/UI/ChannelRoster.uxml?fileID=9197481963319205126&amp;guid=f5e3833453a25d44dbe3e77a4454f6d9&amp;type=3#ChannelRoster"/>
     <Style src="project://database/Assets/UI%20Toolkit/NewUSSFile.uss?fileID=7433441132597879392&amp;guid=e6b15c5266bff3b4e905d4623228ceb6&amp;type=3#NewUSSFile"/>
     <ui:VisualElement style="position: absolute; left: 0; top: 0; bottom: 0; width: 18px; background-color: rgb(24, 24, 24);"/>
-    <ui:Label text="FriendSlop Template" style="color: rgb(240, 240, 248); -unity-font-style: bold; font-size: 103px; position: absolute; top: 178px; left: 73px; height: 148px; width: 1336px;"/>
     <ui:VisualElement style="position: absolute; left: 73px; top: 342px; width: 466px; height: 4px; background-color: rgb(50, 50, 55);"/>
+    <ui:DropdownField name="game-type-dropdown" label="Game Type" choices="Hearthstone,Snap,Mahjong" index="0" style="position: absolute; top: 360px; left: 914px; width: 336px; height: 65px; display: flex;"/>
     <ui:Button name="start-btn" text="Start Game" style="height: 116px; width: 336px; position: absolute; top: 445px; left: 914px; font-size: 45px; background-color: rgb(24, 24, 24); display: flex; visibility: visible;"/>
     <ui:Button name="ready-btn" text="Ready?" style="height: 116px; width: 336px; position: absolute; top: 580px; left: 914px; font-size: 45px; background-color: rgb(24, 24, 24); display: flex;"/>
     <ui:Button name="quit-btn" text="Quit" style="height: 69px; width: 142px; position: absolute; top: 992px; left: 1751px; font-size: 45px; display: flex;"/>
@@ -12,7 +16,7 @@
         <ui:VisualElement style="flex-grow: 1; width: 473px; flex-direction: row; height: 96px; justify-content: center;">
             <Blocks.Sessions.QuickJoinButton quick-join-settings="project://database/Assets/Blocks/MultiplayerSession/Settings/QuickJoinSettings.asset?fileID=11400000&amp;guid=342532e706f5ac34582e818ea7e1ae33&amp;type=2#QuickJoinSettings" data-source="project://database/Assets/Create%20or%20Join%20Session.asset?fileID=11400000&amp;guid=5ed08ce47af26dc40ae57e44228a4202&amp;type=2#Create or Join Session">
                 <Bindings>
-                    <ui:DataBinding property="SessionSettings" binding-mode="ToTarget"/>
+                    <ui:DataBinding data-source-path="Self" property="SessionSettings" binding-mode="ToTarget"/>
                 </Bindings>
             </Blocks.Sessions.QuickJoinButton>
             <Blocks.Sessions.Common.LeaveSessionButton data-source="project://database/Assets/Create%20or%20Join%20Session.asset?fileID=11400000&amp;guid=5ed08ce47af26dc40ae57e44228a4202&amp;type=2#Create or Join Session">
@@ -24,9 +28,10 @@
         <Blocks.Sessions.CreateSessionElement session-settings="project://database/Assets/Create%20or%20Join%20Session.asset?fileID=11400000&amp;guid=5ed08ce47af26dc40ae57e44228a4202&amp;type=2#Create or Join Session" style="width: 469px; height: 91px;"/>
         <Blocks.Sessions.SessionBrowserElement name="SessionBrowserElement" session-settings="project://database/Assets/Create%20or%20Join%20Session.asset?fileID=11400000&amp;guid=5ed08ce47af26dc40ae57e44228a4202&amp;type=2#Create or Join Session" style="height: 440px;">
             <Bindings>
-                <ui:DataBinding property="SessionSettings" binding-mode="ToTarget"/>
+                <ui:DataBinding data-source-path="Self" property="SessionSettings" binding-mode="ToTarget"/>
             </Bindings>
         </Blocks.Sessions.SessionBrowserElement>
     </ui:VisualElement>
     <ui:Instance template="ChannelRoster" style="position: absolute; top: 40px; left: 1235px;"/>
+    <ui:Label text="Scalpers Ruin &#10;Everything" style="color: rgb(240, 240, 248); -unity-font-style: bold; font-size: 103px; position: absolute; top: 62px; left: 73px; height: 248px; width: 1336px;"/>
 </ui:UXML>

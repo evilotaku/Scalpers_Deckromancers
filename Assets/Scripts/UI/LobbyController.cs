@@ -42,6 +42,13 @@ public class LobbyController : MonoBehaviour
         _ui.StartClicked += OnStart;
         _ui.ReadyClicked += OnReady;
         _ui.QuitClicked += () => Application.Quit();
+        _ui.GameTypeChanged += OnGameTypeChanged;
+
+        var cardBattleManager = Object.FindAnyObjectByType<Assets._Scripts.CardBattleManager>();
+        if (cardBattleManager != null)
+        {
+            _ui.SetGameType(cardBattleManager.activeModule.ToString());
+        }
 
         GameManager.OnGameStarted += OnGameStarted;
         PlayerData.OnPlayerStateChanged += OnPlayerStateChanged;
@@ -50,6 +57,11 @@ public class LobbyController : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (_ui != null)
+        {
+            _ui.GameTypeChanged -= OnGameTypeChanged;
+        }
+
         GameManager.OnGameStarted -= OnGameStarted;
         PlayerData.OnPlayerStateChanged -= OnPlayerStateChanged;
         if (NetworkManager.Singleton != null)
@@ -61,6 +73,19 @@ public class LobbyController : MonoBehaviour
             lobby.SessionLifecycle.SessionAdded.RemoveListener(OnSessionAdded);
             lobby.SessionLifecycle.RemovedFromSession.RemoveListener(OnSessionRemoved);
             lobby.SessionLifecycle.Deleted.RemoveListener(OnSessionRemoved);
+        }
+    }
+
+    private void OnGameTypeChanged(string gameType)
+    {
+        var cardBattleManager = Object.FindAnyObjectByType<Assets._Scripts.CardBattleManager>();
+        if (cardBattleManager != null)
+        {
+            if (System.Enum.TryParse<Assets._Scripts.CardBattleManager.ModuleType>(gameType, out var moduleType))
+            {
+                cardBattleManager.activeModule = moduleType;
+                Debug.Log($"[LobbyController] Selected game type updated to: {moduleType}");
+            }
         }
     }
 

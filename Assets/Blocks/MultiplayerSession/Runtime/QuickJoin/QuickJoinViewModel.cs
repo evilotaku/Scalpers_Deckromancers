@@ -1,11 +1,8 @@
 using System;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Unity.Properties;
 using Unity.Services.Multiplayer;
-using Unity.Services.Multiplayer.Components;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Blocks.Sessions
@@ -90,26 +87,9 @@ namespace Blocks.Sessions
             return MultiplayerService.Instance != null;
         }
 
-        public async Task<ISession> MatchmakeSessionAsync(SessionConnector connector)
+        public async Task<ISession> MatchmakeSessionAsync(QuickJoinOptions quickJoinOptions, SessionOptions sessionOptions)
         {
-            try
-            {           
-                connector.WithQuickJoin();
-                connector.Execute();
-                return connector.MultiplayerSession.Session;
-            }
-            catch (Exception exception) 
-            { 
-                Debug.LogError(exception.Message);
-                return await Task.FromResult<ISession>(null);
-            }
-            
-        }
-
-        public Task CreateOrJoinSessionAsync(SessionConnector connector)
-        {
-            connector.Execute();
-            return Task.CompletedTask;
+            return await MultiplayerService.Instance.MatchmakeSessionAsync(quickJoinOptions, sessionOptions);
         }
 
         public void Dispose()

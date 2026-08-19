@@ -1,0 +1,285 @@
+.scifi-card-root {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.scifi-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.scifi-top-left {
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    width: auto;
+    flex-direction: column;
+}
+
+.scifi-stat-plaque {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 3px;
+    position: relative;
+    aspect-ratio: 1;
+}
+
+.scifi-plaque-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.plaque-style-cost {
+    background-image: url("project://database/Assets/UI/FigmaImport/Plaque_Style_I752_10341;748_3899.png?fileID=2800000&guid=e5b8ac5f0d1ddca4badd93d99b27551b&type=3#Plaque_Style_I752_10341;748_3899");
+}
+
+.plaque-style-level {
+    background-image: url("project://database/Assets/UI/FigmaImport/Plaque_Style_I752_10430;748_3899.png?fileID=2800000&guid=e7cf7cb08f932c142a96396acaf7d0ec&type=3#Plaque_Style_I752_10430;748_3899");
+}
+
+.plaque-style-level3 {
+    background-image: url("project://database/Assets/UI/FigmaImport/Plaque_Style_I752_10461;748_3899.png?fileID=2800000&guid=816c306ba17c12c449029dae6df9246a&type=3#Plaque_Style_I752_10461;748_3899");
+}
+
+.scifi-plaque-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.scifi-stat-value {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: rgb(0, 0, 0);
+    -unity-text-align: middle-center;
+    padding: 0;
+    margin: 0;
+}
+
+.text-cost {
+    color: rgb(0, 0, 0);
+}
+
+.text-level {
+    color: rgb(26, 27, 37);
+}
+
+.scifi-stat-icon {
+    width: 6px;
+    height: 6px;
+    margin-left: 1px;
+}
+
+.icon-level {
+    background-image: url("project://database/Assets/UI/FigmaImport/Icon_I752_10430;748_3900;779_19828.png?fileID=2800000&guid=65adf1181685725448a5224a1e3b2c20&type=3#Icon_I752_10430;748_3900;779_19828");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.scifi-middle-bar {
+    position: absolute;
+    top: 48%;
+    left: 4%;
+    width: 92%;
+    height: 11px;
+    justify-content: center;
+}
+
+.scifi-middle-bar-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/UI/FigmaImport/Bar_Background_I722_3215;722_10857.png?fileID=2800000&guid=94c5eac8d8beae141925284bc3ba9add&type=3#Bar_Background_I722_3215;722_10857");
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.scifi-middle-bar-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 4px;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    align-self: center;
+    -unity-text-align: middle-center;
+}
+
+.scifi-card-name {
+    font-size: 5.5px;
+    -unity-font-style: bold;
+    color: rgb(0, 0, 0);
+    -unity-text-align: middle-center;
+    padding: 0;
+    margin: 0;
+}
+
+.scifi-unit-plaques {
+    flex-direction: row;
+    align-items: center;
+}
+
+.scifi-unit-plaques > .scifi-stat-plaque {
+    width: 16px;
+    height: 16px;
+    margin-left: 1px;
+    margin-bottom: 0;
+}
+
+.plaque-style-av {
+    background-image: url("project://database/Assets/UI/FigmaImport/Plaque_Style_I722_3215;722_10852;475_7412.png?fileID=2800000&guid=9a81dae3159ba974a863593a18097f53&type=3#Plaque_Style_I722_3215;722_10852;475_7412");
+}
+
+.plaque-style-dv {
+    background-image: url("project://database/Assets/UI/FigmaImport/Plaque_Style_I722_3215;722_10853;491_3512.png?fileID=2800000&guid=94045c55a62842d4c815452b01138bb3&type=3#Plaque_Style_I722_3215;722_10853;491_3512");
+}
+
+.scifi-unit-plaques .scifi-stat-value {
+    font-size: 7px;
+}
+
+.icon-weapon {
+    background-image: url("project://database/Assets/UI/FigmaImport/Glyph___Weapons___Ray_Gun_I722_3215;722_10852;648_13752;489_2504.png?fileID=2800000&guid=5eab55677b82f154fa235090f6b228e6&type=3#Glyph___Weapons___Ray_Gun_I722_3215;722_10852;648_13752;489_2504");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.icon-shield {
+    background-image: url("project://database/Assets/UI/FigmaImport/Icon_I722_3215;722_10853;491_3513;489_2504.png?fileID=2800000&guid=1954d2be72115034da3991e57bdf3a52&type=3#Icon_I722_3215;722_10853;491_3513;489_2504");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.scifi-bottom-box {
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+    width: 92%;
+    height: 38%;
+}
+
+.scifi-bottom-box-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/UI/FigmaImport/Box_Background.png?fileID=2800000&guid=9e4c2e88050979842a7f21bc0f884dc5&type=3#Box_Background");
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.scifi-bottom-text-layout {
+    width: 100%;
+    height: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scifi-card-mechanic {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: rgb(255, 170, 68);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.scifi-card-ability-name {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: rgb(170, 136, 255);
+    margin-bottom: 1px;
+    padding: 0;
+}
+
+.scifi-card-ability-desc {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    white-space: normal;
+    margin-bottom: 1px;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.scifi-card-story {
+    font-size: 3px;
+    -unity-font-style: italic;
+    color: rgb(136, 136, 136);
+    white-space: normal;
+    padding: 0;
+}
+
+.scifi-type-bar {
+    position: absolute;
+    bottom: 44%;
+    left: 6%;
+    width: 88%;
+    height: 6px;
+    justify-content: center;
+}
+
+.scifi-type-bar-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/UI/FigmaImport/Bar_Background.png?fileID=2800000&guid=046efdf68c651284aa4aea36a9ec581d&type=3#Bar_Background");
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.scifi-type-bar-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.scifi-type-text,
+.scifi-class-text,
+.scifi-race-text {
+    font-size: 3.5px;
+    color: rgb(0, 0, 0);
+    -unity-text-align: middle-center;
+    padding: 0;
+    margin: 0;
+}
+
+.scifi-type-divider {
+    font-size: 3.5px;
+    color: rgb(136, 136, 136);
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 0;
+    margin-top: -1px;
+}
+
+.scifi-cardback {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/_Art/CardBack.png?fileID=21300000&guid=793bc802d53b00f459b7544c91c04b8e&type=3#CardBack");
+    -unity-background-scale-mode: stretch-to-fill;
+}

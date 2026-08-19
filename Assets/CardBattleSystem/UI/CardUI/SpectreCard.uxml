@@ -1,0 +1,62 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/CardUI/SciFiCard.uss" />
+    <ui:VisualElement class="scifi-card-root" picking-mode="Ignore">
+        <ui:VisualElement class="scifi-card-bg" picking-mode="Ignore" />
+        <ui:VisualElement class="scifi-top-left" picking-mode="Ignore">
+            <ui:VisualElement class="scifi-stat-plaque plaque-cost" picking-mode="Ignore">
+                <ui:VisualElement class="scifi-plaque-bg plaque-style-cost" picking-mode="Ignore" />
+                <ui:VisualElement class="scifi-plaque-content" picking-mode="Ignore">
+                    <ui:Label text="4" class="scifi-stat-value text-cost" picking-mode="Ignore" />
+                    <ui:VisualElement class="scifi-stat-icon icon-energy" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="scifi-stat-plaque plaque-level" picking-mode="Ignore">
+                <ui:VisualElement class="scifi-plaque-bg plaque-style-level" picking-mode="Ignore" />
+                <ui:VisualElement class="scifi-plaque-content" picking-mode="Ignore">
+                    <ui:Label text="2" class="scifi-stat-value text-level" picking-mode="Ignore" />
+                    <ui:VisualElement class="scifi-stat-icon icon-level" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="scifi-middle-bar" picking-mode="Ignore">
+            <ui:VisualElement class="scifi-middle-bar-bg" picking-mode="Ignore" />
+            <ui:VisualElement class="scifi-middle-bar-content" picking-mode="Ignore">
+                <ui:Label text="NEBULA SPECTRE" class="scifi-card-name" picking-mode="Ignore" />
+                <ui:VisualElement class="scifi-unit-plaques" picking-mode="Ignore">
+                    <ui:VisualElement class="scifi-stat-plaque plaque-av" picking-mode="Ignore">
+                        <ui:VisualElement class="scifi-plaque-bg plaque-style-av" picking-mode="Ignore" />
+                        <ui:VisualElement class="scifi-plaque-content" picking-mode="Ignore">
+                            <ui:Label text="5" class="scifi-stat-value text-av" picking-mode="Ignore" />
+                            <ui:VisualElement class="scifi-stat-icon icon-weapon" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="scifi-stat-plaque plaque-dv" picking-mode="Ignore">
+                        <ui:VisualElement class="scifi-plaque-bg plaque-style-dv" picking-mode="Ignore" />
+                        <ui:VisualElement class="scifi-plaque-content" picking-mode="Ignore">
+                            <ui:Label text="1" class="scifi-stat-value text-dv" picking-mode="Ignore" />
+                            <ui:VisualElement class="scifi-stat-icon icon-shield" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="scifi-bottom-box" picking-mode="Ignore">
+            <ui:VisualElement class="scifi-bottom-box-bg" picking-mode="Ignore" />
+            <ui:VisualElement class="scifi-bottom-text-layout" picking-mode="Ignore">
+                <ui:Label text="CLOAKED" class="scifi-card-mechanic" picking-mode="Ignore" />
+                <ui:Label text="Shadow Strike" class="scifi-card-ability-name" picking-mode="Ignore" />
+                <ui:Label text="Cannot be targeted by spells." class="scifi-card-ability-desc" picking-mode="Ignore" />
+                <ui:Label text="&quot;It's already behind you.&quot;" class="scifi-card-story" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="scifi-type-bar" picking-mode="Ignore">
+            <ui:VisualElement class="scifi-type-bar-bg" picking-mode="Ignore" />
+            <ui:VisualElement class="scifi-type-bar-content" picking-mode="Ignore">
+                <ui:Label text="UNIT" class="scifi-type-text" picking-mode="Ignore" />
+                <ui:Label text="•" class="scifi-type-divider" picking-mode="Ignore" />
+                <ui:Label text="STEALTH" class="scifi-class-text" picking-mode="Ignore" />
+                <ui:Label text="ALIEN" class="scifi-race-text" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

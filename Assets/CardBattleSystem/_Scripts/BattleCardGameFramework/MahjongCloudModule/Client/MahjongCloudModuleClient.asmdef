@@ -1,0 +1,20 @@
+{
+    "name": "MahjongCloudModuleClient",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dcea414711a1d417c899526c51c49ae6",
+        "GUID:f220a277eefae4d3aa9e31c2b43bb307",
+        "GUID:4dfc164523cae82458328d14bc57114e",
+        "GUID:ef65a05c55bb10f45b8fedd20bcc373b",
+        "GUID:3203a5bd0983b634e962989e5e53678e"
+],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

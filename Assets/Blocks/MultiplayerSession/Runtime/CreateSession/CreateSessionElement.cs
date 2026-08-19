@@ -1,8 +1,7 @@
+using System.Collections.Generic;
 using Blocks.Common;
 using Blocks.Sessions.Common;
-using System.Collections.Generic;
 using Unity.Properties;
-using Unity.Services.Multiplayer.Components;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,7 +14,7 @@ namespace Blocks.Sessions
         const string k_CreateButtonText = "CREATE";
 
         [CreateProperty, UxmlAttribute]
-        public SessionConnector SessionSettings
+        public SessionSettings SessionSettings
         {
             get => m_SessionSettings;
             set
@@ -28,7 +27,7 @@ namespace Blocks.Sessions
                     UpdateBindings();
             }
         }
-        SessionConnector m_SessionSettings;
+        SessionSettings m_SessionSettings;
 
         CreateSessionViewModel m_ViewModel;
 
@@ -97,15 +96,14 @@ namespace Blocks.Sessions
                 return;
             }
 
-            //_ = m_ViewModel.CreateSessionAsync(SessionSettings.GetSessionOptions());
-            m_ViewModel.CreateSession(SessionSettings);
+            _ = m_ViewModel.CreateSessionAsync(SessionSettings.ToSessionOptions());
         }
 
         void UpdateBindings()
         {
             CleanupBindings();
 
-            m_ViewModel = new CreateSessionViewModel(SessionSettings?.MultiplayerSession.SessionType);
+            m_ViewModel = new CreateSessionViewModel(SessionSettings?.sessionType);
             foreach (var binding in m_Bindings)
             {
                 binding.dataSource = m_ViewModel;

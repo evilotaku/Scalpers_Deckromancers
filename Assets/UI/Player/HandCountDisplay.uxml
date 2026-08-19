@@ -1,0 +1,13 @@
+<!--
+2026-08-17 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+-->
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/Player/HandCountDisplay.uss" />
+    <ui:VisualElement name="root" class="hand-count-container" picking-mode="Ignore">
+        <ui:VisualElement name="CardContainer" style="flex-grow: 1; width: 100%; height: 100%;" picking-mode="Ignore" />
+        <ui:VisualElement class="count-overlay" picking-mode="Ignore">
+            <ui:Label name="CountLabel" text="0" class="hand-count-label" picking-mode="Ignore" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

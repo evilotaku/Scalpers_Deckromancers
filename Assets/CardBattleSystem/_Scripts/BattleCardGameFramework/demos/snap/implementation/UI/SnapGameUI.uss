@@ -1,0 +1,54 @@
+.location {
+    width: 250px;
+    height: 400px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgb(100, 100, 100);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.location-name {
+    color: white;
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.player-power {
+    color: lightblue;
+    font-size: 32px;
+}
+
+.opponent-power {
+    color: lightcoral;
+    font-size: 32px;
+}
+
+.board {
+    flex-grow: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    width: 80px;
+    height: 120px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card Label {
+    color: white;
+    font-size: 10px;
+    -unity-text-align: middle-center;
+}
