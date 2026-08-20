@@ -735,7 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158560670}
   m_Layer: 0
-  m_Name: Lobby Spawn Positions
+  m_Name: Spawn Positions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12579,6 +12579,7 @@ GameObject:
   - component: {fileID: 810519843}
   - component: {fileID: 810519842}
   - component: {fileID: 810519841}
+  - component: {fileID: 810519844}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -12662,6 +12663,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 43835904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &810519844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810519840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1646390b94dee47b0f0b7c7fc7e0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LobbyUI
 --- !u!1 &815352420
 GameObject:
   m_ObjectHideFlags: 0
@@ -14277,7 +14290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3896155611
+  GlobalObjectIdHash: 4157264137
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -14342,11 +14355,6 @@ MonoBehaviour:
   - {fileID: 366308562}
   - {fileID: 302232188}
   - {fileID: 352293636}
-  _lobbySpawnPoints:
-  - {fileID: 1672825932}
-  - {fileID: 804841522}
-  - {fileID: 758712939}
-  - {fileID: 423815200}
 --- !u!114 &950196604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15957,7 +15965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373912634716443392, guid: 79e23aad5a6075041a5b4a9922955a28, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 4214785370
+      value: 2142206835
       objectReference: {fileID: 0}
     - target: {fileID: 3373912634716443392, guid: 79e23aad5a6075041a5b4a9922955a28, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
@@ -17070,7 +17078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 724983133
+  GlobalObjectIdHash: 3130812544
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1

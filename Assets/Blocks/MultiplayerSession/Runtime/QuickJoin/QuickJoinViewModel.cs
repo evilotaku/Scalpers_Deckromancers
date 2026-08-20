@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Unity.Properties;
 using Unity.Services.Multiplayer;
+using Unity.Services.Multiplayer.Components;
 using UnityEngine.UIElements;
 
 namespace Blocks.Sessions
@@ -87,9 +88,10 @@ namespace Blocks.Sessions
             return MultiplayerService.Instance != null;
         }
 
-        public async Task<ISession> MatchmakeSessionAsync(QuickJoinOptions quickJoinOptions, SessionOptions sessionOptions)
+        public async Task<ISession> MatchmakeSessionAsync(SessionConnector connection)
         {
-            return await MultiplayerService.Instance.MatchmakeSessionAsync(quickJoinOptions, sessionOptions);
+            connection.WithQuickJoin().Execute();
+            return connection.MultiplayerSession.Session;
         }
 
         public void Dispose()

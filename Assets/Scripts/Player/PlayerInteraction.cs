@@ -53,7 +53,7 @@ public class PlayerInteraction : NetworkBehaviour
         if (_heldItem != null)
             DropItem();
         else
-            TryPickUp();
+            TryInteractOrPickUp();
     }
 
     public override void OnNetworkDespawn()
@@ -65,12 +65,20 @@ public class PlayerInteraction : NetworkBehaviour
         _rotateAction?.Dispose();
     }
 
-    private void TryPickUp()
+    private void TryInteractOrPickUp()
     {
         InteractRay.origin = Camera.main.transform.position;
         InteractRay.direction = Camera.main.transform.forward;
         Debug.DrawRay(InteractRay.origin, InteractRay.direction * InteractRange, Color.green, 1f);
         if (!Physics.Raycast(InteractRay, out var hit, InteractRange)) return;
+
+        // Try generic interactable first
+        var interactable = hit.collider.GetComponentInParent<IInteractable>();
+        if (interactable != null)
+        {
+            interactable.Interact(NetworkManager.Singleton.LocalClientId);
+            return;
+        }
 
         var item = hit.collider.GetComponentInParent<PickupItem>();
         if (item == null) return;

@@ -14,7 +14,7 @@ namespace Assets._Scripts
 {
     public class CardBattleManager : MonoBehaviour
     {
-        public enum ModuleType { Hearthstone, Snap, Mahjong }
+        public enum ModuleType { Hearthstone, Snap, Mahjong, Dungeon }
 
         [Header("Module Configuration")]
         public ModuleType activeModule = ModuleType.Hearthstone;

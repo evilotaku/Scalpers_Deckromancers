@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerSpawnManager : MonoBehaviour
 {
     [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private Transform[] _lobbySpawnPoints;
 
     private int _nextSpawnIndex;
 
@@ -18,6 +19,8 @@ public class PlayerSpawnManager : MonoBehaviour
         NetworkManager.Singleton.ConnectionApprovalCallback += OnApprove;
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
         NetworkManager.Singleton.OnServerStopped += OnServerStopped;
+
+        GameManager.OnGameStarted += OnGameStarted;
     }
 
     private void OnDestroy()
@@ -26,6 +29,8 @@ public class PlayerSpawnManager : MonoBehaviour
         NetworkManager.Singleton.ConnectionApprovalCallback -= OnApprove;
         NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
         NetworkManager.Singleton.OnServerStopped -= OnServerStopped;
+
+        GameManager.OnGameStarted -= OnGameStarted;
     }
 
     // Approve up to 4 players; tell NGO we handle spawning ourselves.
@@ -42,7 +47,12 @@ public class PlayerSpawnManager : MonoBehaviour
         if (_nextSpawnIndex >= _spawnPoints.Length) return;
 
         int spawnIndex = _nextSpawnIndex++;
-        Transform spawn = _spawnPoints[spawnIndex];
+        
+        bool inLobby = GameManager.Instance != null && GameManager.Instance.CurrentState.Value == GameState.Lobby;
+        Transform spawn = (inLobby && _lobbySpawnPoints != null && spawnIndex < _lobbySpawnPoints.Length) 
+            ? _lobbySpawnPoints[spawnIndex] 
+            : _spawnPoints[spawnIndex];
+
         var prefab = NetworkManager.Singleton.NetworkConfig.PlayerPrefab;
         if (prefab == null) { Debug.LogError("[SpawnManager] PlayerPrefab is null on NetworkConfig!"); return; }
 
@@ -54,6 +64,30 @@ public class PlayerSpawnManager : MonoBehaviour
 
         var colour = go.GetComponent<PlayerColour>();
         if (colour != null) colour.PlayerIndex.Value = spawnIndex;
+    }
+
+    private void OnGameStarted()
+    {
+        if (!NetworkManager.Singleton.IsServer) return;
+
+        foreach (var client in NetworkManager.Singleton.ConnectedClientsList)
+        {
+            var playerObject = client.PlayerObject;
+            if (playerObject != null)
+            {
+                var colour = playerObject.GetComponent<PlayerColour>();
+                if (colour != null)
+                {
+                    int index = colour.PlayerIndex.Value;
+                    if (index < _spawnPoints.Length)
+                    {
+                        var target = _spawnPoints[index];
+                        playerObject.transform.position = target.position;
+                        playerObject.transform.rotation = target.rotation;
+                    }
+                }
+            }
+        }
     }
 
     // Reset the index when the session ends so the next host starts fresh.
